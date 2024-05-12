@@ -1,0 +1,48 @@
+
+KEY CONSTRAINTS:-
+
+1.PRIMARY KEY
+2.FOREIGN KEY
+
+1.PRIMARY KEY:-  it is a column(or set of columns ) in a table that uniquely identifies each row.
+                 (a unique id ) There is only 1 primary key and it should be not null.
+
+                 agar id aur name ko primary key bnaye to kisi do user ka
+                 id aur name same nhi hona chaiye.
+
+                 CREATE TABLE user(
+                    id INT PRIMARY KEY,                       method 1
+                    age INT,
+                    name VARCHAR(30) NOT NULL,
+                    email VARCHAR(30) UNIQUE,
+                    followers INT DEFAULT 0,
+                    following INT,
+                    CONSTRAINT age_check CHECK(age>=13)
+                    PRIMARY KEY(id)                            method 2
+                    );
+
+2. FOREIGN KEY:-a foreign key is a column (or a set of columns) in a table that refers to the primary key
+                in another table. foreign key can have duplicate and null values.
+                there can be multiple foreign key.
+
+                man lo ek student table hai aur ek teacher table hai dono me id aur name hai okk, teacher table ka id ek primary key hoga aur student table ke column me add kr denge jo ki ye show krega kis student ko kis id ke teacher padhayenge. to ye jo link hua isi ko foreign key kahte hain
+
+
+CREATE DATABASE IF NOT EXISTS instagram;
+
+USE instagram;
+
+CREATE TABLE user(
+id INT,
+name VARCHAR(30) NOT NULL,
+email VARCHAR(30) UNIQUE,
+followers INT DEFAULT 0,
+following INT
+);
+
+CREATE TABLE post(
+id INT PRIMARY KEY,
+content VARCHAR(30),
+user_id INT,
+FOREIGN KEY (user_id) REFERENCES user(id)
+);
