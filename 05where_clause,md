@@ -1,0 +1,47 @@
+
+                                                WHERE CLAUSE
+
+
+operator:
+
+1.arithmatic operator     : +,-,*,/,%
+2.comparision operator    : = ,!=, >, <, >=,<=
+3.logical operator        : AND, OR, NOT, IN, BETWEEN, ALL, LIKE, ANY
+4.Bitwise                 : &(bitwise and), |(bitwise or)
+
+
+3.logical operator:
+
+//AND : to check for both condition to be true
+
+SELECT name,age,followers
+FROM user
+WHERE age>15 AND followers>200;
+
+//OR : to check for one of the condition to be true
+
+SELECT name,age,followers
+FROM user
+WHERE age>15 OR followers>200;
+
+//BETWEEN : select for a given range
+
+SELECT name,age,followers
+FROM user
+WHERE age BETWEEN 15 AND 25;
+
+//IN : matches any value in the list
+
+SELECT name,followers,email
+FROM user
+WHERE email In ("rana@gmail.com","abcd@gmail.com");
+
+SELECT name,age,email
+FROM user
+WHERE age In (14,16);
+
+//NOT : to negate the given condition
+
+SELECT name,age,email
+FROM user
+WHERE age NOT In (14,16);

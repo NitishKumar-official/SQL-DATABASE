@@ -1,0 +1,17 @@
+
+                                      =>Having clause<=
+
+=>similar to where clause, i.e. applies some condition on rows But it is used when we want to apply
+  any condition after grouping.
+
+=> Where is for the table, Having is for a GROUP
+=> grouping is necessary for Having  
+
+SELECT age, max(followers)
+FROM user
+GROUP BY age
+HAVING max(followers)>200;
+
+//sabse pahle age ke hisab se grouping hoga uske baad us sara grouping me sabka max wala user show hoga 
+  lekin jab Having ka condition apply hoga tb usme se bhi jis jis followers 200 se jyada hoga sare GROUP me\
+  wahi show hoga.

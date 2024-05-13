@@ -1,0 +1,37 @@
+
+                                      => AGGREGATE FUNCTION <=
+
+=>aggregate function perform a calculation on a set of values and return a single value.
+
+1.count()
+2.max()
+3.min()
+4.sum()
+5.avg()
+
+
+1.count()
+
+SELECT count(age)
+FROM user
+WHERE age=14;
+
+2.max()
+
+SELECT max(FOLLOWERS)
+FROM user;
+
+3.min()
+
+SELECT min(AGE)
+FROM user;
+
+4.sum()
+
+SELECT sum(AGE)
+FROM user;
+
+5.avg()
+
+SELECT avg(AGE)
+FROM user;

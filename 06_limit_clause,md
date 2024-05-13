@@ -1,0 +1,15 @@
+                                               LIMIT CLAUSE
+
+=> sets an upper limit on number of (tuples) rows to be returned   
+
+
+SELECT name,age,email
+FROM user
+WHERE age In (14,16)    //yha pr 3 user ka data returned ho rha tha pr mujhe chaiye do isliye limit ka use kiye
+limit 2;
+
+SELECT name,age,email
+FROM user              //yha bhi sara return ho rha tha pr mujhe chaiye 2 hi isliye limit ka use kiye
+limit 2;
+
+

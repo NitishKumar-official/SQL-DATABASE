@@ -1,0 +1,17 @@
+                                    
+                                      => ORDER BY CLAUSE <=
+
+=> to short in ascending(ACS) or descending order(DESC)
+
+
+SELECT name,age,email,followers
+FROM user
+ORDER BY followers ;                   //default = ascending
+
+SELECT name,age,email,followers
+FROM user
+ORDER BY followers ASC;
+
+SELECT name,age,email,followers
+FROM user
+ORDER BY followers DESC;

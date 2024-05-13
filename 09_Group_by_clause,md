@@ -1,0 +1,22 @@
+
+                                      => Group by Clause <=
+
+=>Group rows that have the same values into summary rows. it collects data from multiple recors and groups
+  the result by one or more columns.
+
+SELECT age, count(id)
+FROM user             //age ki hisab se groups bna usme us age ka kitna id hai wo show hoga
+GROUP BY age;
+
+SELECT age, max(followers)
+FROM user             //age ke hisab se groups bna aur us sare groups me jiska sabse jyada followrs hai wo show hua
+GROUP BY age;
+
+SELECT name age, max(followers)
+FROM user              //usi columns ko SELECT kr sakte hain jiska use groups bnane me kiya gya ho jaise ki age, 
+                       //isme error aayega qki name ka use nhi hua hai groups bnane me
+GROUP BY age;
+
+SELECT age, max(name)
+FROM user             // lekin aggregate fun me rakh sakte hain waise columns jo ki groups bnane me use nhi kiya gya ho
+GROUP BY age;

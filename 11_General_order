@@ -1,0 +1,18 @@
+
+
+                                      =>General Order<=
+
+SELECT column(s)
+FROM table_name
+WHERE condition
+GROUP BY column(s)
+HAVING condition
+ORDER BY column(s) ASC;                                      
+
+
+
+SELECT age, max(followers)
+FROM user
+GROUP BY age
+HAVING max(followers)>200
+ORDER BY age DESC;
