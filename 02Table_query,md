@@ -11,6 +11,9 @@ TABLE QUERY:-
 
 1.CREATE 
 
+
+
+
 CREATE TABLE user(
 id INT,
 name VARCHAR(30) NOT NULL,
@@ -19,7 +22,14 @@ followers INT,
 following INT
 );
 
+
+
+
 2.INSERT
+
+
+
+
 
 INSERT INTO user
 (id,age,name,email,followers,following)
@@ -27,11 +37,105 @@ VALUES
 (1,14,"RANA","kumarnitish27212@gmail.com",123,145),
 (2,23,"Nitu baby","nrajofficial4002@gmail.com",200,200);
 
+
+
+
+
+3.UPDATE
+
+
+UPDATE user
+SET followers = 600
+WHERE age = 16;
+
+select * FROM user;
+
+SET SQL_SAFE_UPDATES = 0;  //YE IMP HAI RUN KRNA
+
+
+
+
+
+4.ALTER
+
+
+
+
+
+ALTER TABLE user
+ADD COLUMN city VARCHAR(30) DEFAULT "Delhi";   //jab new column add krna ho
+
+SELECT * FROM user;
+
+ALTER TABLE user                              //jab koi column delete krna ho
+DROP COLUMN age;
+
+ALTER TABLE user                              //jab table ko rename krna ho
+RENAME TO instaUser;
+
+SELECT * FROM instaUser;
+
+ALTER TABLE instaUser
+RENAME TO user;
+
+ALTER TABLE user
+CHANGE COLUMN followers subs INT DEFAULT 0;     //jab column ko rename krna ho
+SELECT * FROM USER;
+
+ALTER TABLE user
+MODIFY subs INT DEFAULT 5;                      //jab column ke constraints ko CHANGE krna ho
+
+INSERT INTO user
+(id,name,email,following)
+VALUES
+(7,"tSish","ranaDFDFDFDFDFgmaidffl.com",2235);
+
+
+
+
+
+
+5. TURNCATE
+
+TRUNCATE TABLE user;                //isse table ka sara formate rhta hai pr sara data delete ho jata hai
+
+drop TABLE post;                    //isse pura table hi delete ho jata hai
+
+
+
+
+
+
+6. DELETE
+
+
+
+
+
+DELETE FROM user
+where age = 14;   //agr where condition nhi denge to sara data dlt ho jayega
+
+
+
+
+
 7.SELECT
+
+
+
+
 
 SELECT id,name,email FROM user;       //jab hmko koi particular show krwana ho
 SELECT * FROM user;                   // jab sara data print krwana ho
 
+
+
+
+
 8. DISTINCT
+
+
+
+
 
 SELECT DISTINCT age FROM user;        //jab koi column me unique data show krwana ho
